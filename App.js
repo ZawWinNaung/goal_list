@@ -28,7 +28,7 @@ export default function App() {
   return (
     <View style={styles.appContainer}>
       <Button title='Add New Goal' color='#5e0acc' onPress={starAddGoalHandler} />
-      {modelIsVisible && <GoalInput onAddGoal={addGoalHandler} />}
+      <GoalInput visible={modelIsVisible} onAddGoal={addGoalHandler} />
       <View style={styles.goalsContainer}>
         <FlatList
           data={courseGoals}
